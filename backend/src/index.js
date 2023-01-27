@@ -10,7 +10,7 @@ const flash = require("express-flash");
 const cors = require("cors");
 const connectDB = require("../config/database");
 const authRoutes = require("./routes/auth")
-const mainRoutes = require('./routes/main');
+// const mainRoutes = require('./routes/main');
 
 require('dotenv').config({path: './config/.env'});
 
@@ -48,8 +48,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(flash());
-app.use('/', mainRoutes);
+// app.use('/', mainRoutes);
 app.use('/auth', authRoutes);
+
  
 app.listen(4000, ()=>{
     console.log('Server started.')

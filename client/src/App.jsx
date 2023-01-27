@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './Components/Homepage';
 import Login from './Components/Login';
 import NavBar from './Components/NavBar';
-import { myContext } from './Context';
+import { UserContext } from './Context';
 
 
 function App() {
-  const userObject = useContext(myContext);
+  const userObject = useContext(UserContext);
   console.log(userObject);
   return (
     <BrowserRouter>
